@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "b68b6ce8-bac8-4656-bd0e-85c392373d95",
+		"name": "Задание от Анатолия CSV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20829113"
+	},
+	"item": [
+		{
+			"name": "Run_coll",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let req = request.data;\r",
+							"let name = req.name \r",
+							"let age = req.age;\r",
+							"let salary = req.salary; \r",
+							"console.log(salary.trim().length === salary.length)\r",
+							"\r",
+							"if \r",
+							"    (name.trim().length !== name.length){\r",
+							"        pm.test(\"Status code isn't 200\", function () {\r",
+							"        pm.response.to.not.have.status(200);\r",
+							"    });\r",
+							"    }\r",
+							"else if(salary.replace(/\\s/gim, '').length !== salary.length){\r",
+							"        pm.test(\"Status code isn't 200\", function () {\r",
+							"        pm.response.to.not.have.status(200);\r",
+							"    });\r",
+							"}\r",
+							"else if (age.replace(/\\s/gim, '').length !== age.length) {\r",
+							"    pm.test(\"Status code isn't 200\", function () {\r",
+							"        pm.response.to.not.have.status(200);\r",
+							"    });\r",
+							"}\r",
+							"else if (name.length>=3 && name.length<=40 &&\r",
+							"     age>=18 && age<=120 && \r",
+							"     salary>=1 && salary<=1000000){\r",
+							"        pm.test(\"Status code is 200\", function () {\r",
+							"        pm.response.to.have.status(200);    \r",
+							"});\r",
+							"}\r",
+							"else \r",
+							"    pm.test(\"Status code isn't 200\", function () {\r",
+							"        pm.response.not.to.have.status(200);\r",
+							"        console.log('fuck')\r",
+							"    });\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "asd23sdfs",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "{{age}}",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "100 0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}//user_info_2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"",
+						"user_info_2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
