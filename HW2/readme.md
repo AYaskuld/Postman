@@ -1,5 +1,7 @@
-## HW_2 Postman. <a href ="https://github.com/AYaskuld/Postman/blob/main/HW2/My%20salary.postman_environment.json">Environment.</a> <a href ="https://github.com/AYaskuld/Postman/blob/main/HW2/1.Task%202.postman_collection.json">Решение.</a> ##
+## HW_2 Postman. ##
+<H3>Задание от Вадима. <a href ="https://github.com/AYaskuld/Postman/blob/main/HW2/My%20salary.postman_environment.json">Environment.</a> <a href ="https://github.com/AYaskuld/Postman/blob/main/HW2/1.Task%202.postman_collection.json">Решение.</a></H3>
 
+---
 http://162.55.220.72:5005/first
 1. Отправить запрос.
 2. Статус код 200
