@@ -1,6 +1,7 @@
 # Postman. HW1. #  
 ### Создать запросы в Postman ###
 
+**Решение:**
 <a href ="https://github.com/AYaskuld/Postman/blob/main/HW1/Group%2030.postman_collection.json">Коллекция.</a>
 <a href ="https://github.com/AYaskuld/Postman/blob/main/HW1/My%20salary.postman_environment.json">Окружение.</a>
 
